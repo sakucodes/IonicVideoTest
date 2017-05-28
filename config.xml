@@ -1,13 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="codes.saku.videotest" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Video Test</name>
-    <description>Video Test App.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description>Video Test App with fullscreen-ish behavoir.</description>
+    <author email="_saku@live.de" href="https://saku.codes/">saku.codes</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
-    <allow-navigation href="http://192.168.178.20:8100" />
-    <allow-navigation href="http://192.168.56.1:8100" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
