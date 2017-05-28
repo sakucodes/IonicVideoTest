@@ -1,3 +1,65 @@
 page-home {
 
+  #mediacontainer {
+    position: relative;
+    color: white;
+    padding: 0;
+    video {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .controls {
+      width: 100%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(black, 0.6);
+
+      .grid {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .range-md {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      &.fade {
+        animation-name: hideControls;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  ion-content {
+    margin-top: 1em;
+  }
+
+  .fullscreen {
+    #mediacontainer {
+      video {
+        top: 0;
+        position: absolute;
+      }
+      .controls {
+        position: fixed;
+        margin-top: 0;
+        bottom: 0;
+      }
+    }
+
+    ion-content {
+      display: none;
+    }
+  }
+}
+
+@keyframes hideControls {
+  from { opacity: 1 }
+  to { opacity: 0 }
 }

@@ -1,14 +1,52 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-header [class.fullscreen]="isFullScreen">
+  <div id="mediacontainer">
+    <video #video preload="auto" poster="assets/Big_Buck_Bunny.jpg" (timeupdate)="updateTime()" (tap)="showControls()" (waiting)="loading()">
+      <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.720p.webm"
+        type="video/webm" />
+    </video>
+    <ion-grid class="controls" [class.fade]="!areControlsVisible" #controls>
+      <ion-row [hidden]="!isLoading">loading...</ion-row>
+      <ion-row align-items-center>
+        <button ion-col col-2 ion-button icon-only (tap)="togglePlayState()"><ion-icon [name]="video.paused ? 'play' : 'pause'"></ion-icon></button>
+        <ion-range ion-col col-10 [(ngModel)]="video.currentTime" min="0" [max]="video.duration" color="primary" (ionFocus)="showControls()" (ionChange)="timeSelected()">
+          <ion-label range-left>{{timeString}}</ion-label>
+        </ion-range>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content #content>
+  <ul>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Hello</li>
+  </ul>
 </ion-content>
