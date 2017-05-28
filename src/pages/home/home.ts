@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, Renderer } from '@angular/core';
-import { Content, NavController, Platform, DomController } from 'ionic-angular';
+import { NavController, Platform, DomController } from 'ionic-angular';
 import { ScreenOrientation } from "@ionic-native/screen-orientation";
 import { StatusBar } from "@ionic-native/status-bar";
 
